@@ -2,7 +2,9 @@
 ijkplayer k0.8.8 base on FFmpeg 4.0
 
 **播放效果截图**
-![在这里插入图片描述](./Screenshots/Screenshot_20230322_182542_tv.danmaku.ijk.media.example.jpg)
+<div align="left">
+<img src=./Screenshots/Screenshot_20230322_182542_tv.danmaku.ijk.media.example.jpg width=30% />
+</div>
 
 
 # 一、源码库和 Tags
