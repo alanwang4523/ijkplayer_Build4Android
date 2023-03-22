@@ -7,9 +7,9 @@ ijkplayer k0.8.8 base on FFmpeg 4.0
 
 [Ijkplayer Tags](https://github.com/bilibili/ijkplayer/tags) 列表：https://github.com/bilibili/ijkplayer/tags
 
-BiliBili [OpenSSL  Tags](https://github.com/bilibili/openssl/tags) 列表：https://github.com/bilibili/openssl/tags
+[BiliBili OpenSSL  Tags](https://github.com/bilibili/openssl/tags) 列表：https://github.com/bilibili/openssl/tags
 
-BiliBili [FFmpeg Tags](https://github.com/bilibili/FFmpeg/tags) 列表：https://github.com/bilibili/FFmpeg/tags
+[BiliBili FFmpeg Tags](https://github.com/bilibili/FFmpeg/tags) 列表：https://github.com/bilibili/FFmpeg/tags
 
 # 二、编译环境
 - 系统：MacOS Monterey 12.5.1，Apple M1
