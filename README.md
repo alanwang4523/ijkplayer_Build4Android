@@ -15,7 +15,7 @@ ijkplayer k0.8.8 base on FFmpeg 4.0
 - 系统：MacOS Monterey 12.5.1，Apple M1
 - NDK: **android-ndk-r10e**
 
-  配置好环境变量，**ANDROID_SDK** 和 **ANDROID_NDK**，我用的 zsh
+配置好环境变量，**ANDROID_SDK** 和 **ANDROID_NDK**，我用的 zsh
 ```bash
 vim ~/.zshrc
 source ~/.zshrc
@@ -32,14 +32,15 @@ git checkout -B latest k0.8.8
 
 ## 2、修改编译配置
 ### 1）修改需要编译的 ABI 架构
-  我只需编译 armv7a 和 arm64，修改以下脚本，避免拷贝和编译多份不同架构的代码。
+我只需编译 armv7a 和 arm64，修改以下脚本，避免拷贝和编译多份不同架构的代码。
 
 把以下这些脚本里的 **pull_fork** 只保留需要的架构。
-   **init-android-openssl.sh
+**init-android-openssl.sh**
    
-    init-android.sh
+**init-android.sh**
     
-    init-android-libsoxr.sh** 
+**init-android-libsoxr.sh** 
+
 ```bash
 pull_fork "armv5"
 pull_fork "armv7a"
@@ -54,11 +55,11 @@ pull_fork "arm64"
 ```
 
 把以下这些脚本里的 **ACT_ABI_32** 和 **ACT_ABI_64** 只保留需要的架构。
-  **./android/contrib/compile-openssl.sh
+**./android/contrib/compile-openssl.sh**
   
-  ./android/contrib/compile-libsoxr.sh
+**./android/contrib/compile-libsoxr.sh**
   
-  ./android/compile-ijk.sh**
+**./android/compile-ijk.sh**
 
     
 ```bash
@@ -154,9 +155,9 @@ cd ..
 ## 6、编译过程遇到的错误
 **注意：如期间遇到弹窗提示 ndk 的一些命令行工具不安全，不用管，选择【打开】或【取消】，在 Mac 的 【系统偏好设置】-->【安全性与隐私】的提示里选择【仍然允许】**
 ### 1）编译 openssl 出错，错误如下：
-**error: undefined reference to 'OBJ_create'
+**error: undefined reference to 'OBJ_create'**
 
-error: ld returned 1 exit status**
+**error: ld returned 1 exit status**
 
 ```bash
 ../libcrypto.a(ec_pmeth.o):ec_pmeth.c:function pkey_ec_ctrl_str: error: undefined reference to 'OBJ_ln2nid'
@@ -169,8 +170,8 @@ make: *** [build_apps] Error 1
 ./compile-openssl.sh all
 ```
 
-**失败原因：多线程编译导致
-解决方案：改成单线程编译**，[参考链接](https://github.com/bilibili/ijkplayer/issues/5113)：
+**失败原因：多线程编译导致**
+**解决方案：改成单线程编译，[参考链接](https://github.com/bilibili/ijkplayer/issues/5113)：**
 
 需要修改的脚本：**./android/contrib/tools/do-detect-env.sh   #91 行**的 
 
