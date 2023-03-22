@@ -35,6 +35,7 @@ git checkout -B latest k0.8.8
 我只需编译 armv7a 和 arm64，修改以下脚本，避免拷贝和编译多份不同架构的代码。
 
 把以下这些脚本里的 **pull_fork** 只保留需要的架构。
+
 **init-android-openssl.sh**
    
 **init-android.sh**
@@ -55,6 +56,7 @@ pull_fork "arm64"
 ```
 
 把以下这些脚本里的 **ACT_ABI_32** 和 **ACT_ABI_64** 只保留需要的架构。
+
 **./android/contrib/compile-openssl.sh**
   
 **./android/contrib/compile-libsoxr.sh**
@@ -171,6 +173,7 @@ make: *** [build_apps] Error 1
 ```
 
 **失败原因：多线程编译导致**
+
 **解决方案：改成单线程编译，[参考链接](https://github.com/bilibili/ijkplayer/issues/5113)：**
 
 需要修改的脚本：**./android/contrib/tools/do-detect-env.sh   #91 行**的 
@@ -201,6 +204,7 @@ Unknown option "--disable-ffserver".
 See ./configure --help for available options.
 ```
 **出错原因：ffmpeg 4.0 删除了 ffserver**
+
 **解决方案：注释掉 ffserver 配置，[参考链接](https://github.com/bilibili/ijkplayer/issues/4690)，修改 config/module.sh 文件，注释掉以下两行：**
 
 ```bash
@@ -209,7 +213,9 @@ export COMMON_FF_CFG_FLAGS="$COMMON_FF_CFG_FLAGS --disable-vda"
 ```
 ### 3）编译 ffmpeg 出错，错误如下：
 **error: undefined reference to 'ff_ac3_parse_header'**
+
 **出错原因：ffmpeg 4.0 不再支持 eac3**
+
 **解决方案：禁掉 eac3，[参考链接](https://blog.csdn.net/hhbgk/article/details/99191916)，修改 config/module.sh 文件，增加如下一行：**
 
 ```bash
@@ -219,6 +225,7 @@ export COMMON_FF_CFG_FLAGS="$COMMON_FF_CFG_FLAGS --disable-bsf=eac3_core"
 
 ### 4）编译 ijkplayer 出错，错误如下：
 **Android NDK: Host 'awk' tool is outdated. Please define NDK_HOST_AWK to point to Gawk or Nawk !**
+
 **解决方案：[参考链接](https://stackoverflow.com/questions/8384213/android-ndk-revision-7-host-awk-tool-is-outdated-error)**
 
 ```bash
