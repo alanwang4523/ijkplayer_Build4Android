@@ -4,8 +4,11 @@ ijkplayer k0.8.8 base on FFmpeg 4.0
 
 # 一、源码库和 Tags
 [Ijkplayer](https://github.com/bilibili/ijkplayer) 源码：https://github.com/bilibili/ijkplayer
+
 [Ijkplayer Tags](https://github.com/bilibili/ijkplayer/tags) 列表：https://github.com/bilibili/ijkplayer/tags
+
 BiliBili [OpenSSL  Tags](https://github.com/bilibili/openssl/tags) 列表：https://github.com/bilibili/openssl/tags
+
 BiliBili [FFmpeg Tags](https://github.com/bilibili/FFmpeg/tags) 列表：https://github.com/bilibili/FFmpeg/tags
 
 # 二、编译环境
@@ -216,6 +219,7 @@ export COMMON_FF_CFG_FLAGS="$COMMON_FF_CFG_FLAGS --disable-bsf=eac3_core"
 ```
 
 ## 7、编译结果
+**编译好的 so 放在了本项目的 ./build_output 中，基于 ijkplayer k0.8.8 ffmpeg 4.0(ff4.0--ijk0.8.8--20210426--001) 并包含 openssl、yuv、SDL**
 ### 1）编译 openssl
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/d8bbc51bed8e48208a794072049ea194.png)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/f1b46f3ebec740a69b4e0824e736c32a.png)
