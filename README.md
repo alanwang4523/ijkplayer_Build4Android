@@ -1,6 +1,9 @@
 # ijkplayer_Build4Android
 ijkplayer k0.8.8 base on FFmpeg 4.0
 
+**播放效果截图**
+![在这里插入图片描述](./Screenshots/Screenshot_20230322_182542_tv.danmaku.ijk.media.example.jpg)
+
 
 # 一、源码库和 Tags
 [Ijkplayer](https://github.com/bilibili/ijkplayer) 源码：https://github.com/bilibili/ijkplayer
